@@ -5,8 +5,8 @@ class TestHelpersIdentity < Test::Unit::TestCase
 	    setup do
 	    	@io = StringIO.new
 	    	@io << "  1) EDE3624089D6523D0857FB111E83A8D767FF987E \"iPhone Developer: Emil Palm (5GJ7LC8A2T)\"\n"
-			@io << "  2) 73BE89F61257393C46CAD816EF717026B9C76D13 \"Apple Development IOS Push Services: se.blocket.pushnotifications\"\n"
-			@io << "  3) F51D2904B9CD1F9E5964B88C741E4AE7EAB9A291 \"iPhone Distribution: B locket AB\"\n"
+			@io << "  2) 73BE89F61257393C46CAD816EF717026B9C76D13 \"Apple Development IOS Push Services: graymatter.test.xir\"\n"
+			@io << "  3) F51D2904B9CD1F9E5964B88C741E4AE7EAB9A291 \"iPhone Distribution: Graymatter\"\n"
 			@io << "     3 valid identities found"
     	end
 
