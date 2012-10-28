@@ -4,7 +4,7 @@ module Codesign
 	class Signer
 		attr_accessor :application, :identity, :provisioning_file
 
-		def self.sign_for_application(application)
+		def self.sign_for_application(application,provisioning_profiles = nil)
 			raise Codesign::Exception.new("#{application} is not a application") unless File.directory? application
 			raise Codesign::Exception.new("#{application} is not a valid application") unless File.exists?("#{application}/Info.plist")
 			plist = CFPropertyList::List.new(:file => "#{application}/Info.plist")
@@ -12,7 +12,7 @@ module Codesign
 
 			bundle_id = data['CFBundleIdentifier']
 
-			provisioning_profiles = Codesign::Helpers::Apple::ProvisioningProfiles.new
+			provisioning_profiles = Codesign::Helpers::Apple::ProvisioningProfiles.new unless provisioning_profiles
 
 			provisioning_file = nil
 			identity = nil
