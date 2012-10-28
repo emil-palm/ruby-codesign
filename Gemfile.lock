@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/emilpalm/code/grayhound
+GIT
+  remote: https://github.com/mrevilme/Grayhound.git
+  revision: dd7463d194108412e6d590d5361d3b9147e7336c
   specs:
     grayhound (0.1.0)
       json
